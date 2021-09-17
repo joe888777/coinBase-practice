@@ -1,6 +1,5 @@
 import axios from "axios";
 import { currenciesURL, getCurrencyURL } from "../../api";
-import { useSelector } from "react-redux";
 export const currencyFetchAction = () => async (dispatch) => {
   dispatch({
     type: "LOADING_CURRENCIES",

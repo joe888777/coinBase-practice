@@ -1,10 +1,9 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import {
-  currencyFetchAction,
   searchAction,
   clearSearchedAction,
 } from "../redux/actions/currencyAction";
@@ -37,7 +36,7 @@ const Nav = () => {
     </>
   );
 };
-const NavStyled = styled(motion.Nav)`
+const NavStyled = styled(motion.nav)`
   display: flex;
   justify-content: center;
   margin: 0 0 2rem 0;
