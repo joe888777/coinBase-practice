@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const based_url = "https://api.pro.coinbase.com/";
 const api_key =
   "client_id=9f88edbd33fb87670ff519bca13d460c86ad72bbc2a4b4d9557145370f16d8de";

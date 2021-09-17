@@ -1,4 +1,3 @@
-import { useEffect, useLayoutEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -6,22 +5,13 @@ import { timeTrans } from "../utils";
 import { useHistory } from "react-router-dom";
 import { productdetailAction } from "../redux/actions/detailAction";
 import Loading from "./Loading";
-const ProductDetail = ({ pathId, name, message, status }) => {
+const ProductDetail = ({ pathId }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const { id, info, historyRates, isLoading } = useSelector(
     (state) => state.product
   );
-  useLayoutEffect(() => {
-    dispatch(
-      productdetailAction({
-        id: pathId,
-        info: { id: id, name: name, message: message, status: status },
-        transfer: `${pathId}-BTC`,
-        granularity: 60,
-      })
-    );
-  }, [dispatch]);
+
   // time, low, high, open, close, volume
   const [TIME, LOW, HIGH, OPEN, CLOSE, VOLUME] = [0, 1, 2, 3, 4, 5];
   const exitDetailHandler = (e) => {
@@ -33,7 +23,12 @@ const ProductDetail = ({ pathId, name, message, status }) => {
     dispatch(
       productdetailAction({
         id: pathId,
-        info: { id: id, name: name, message: message, status: status },
+        info: {
+          id: id,
+          name: info.name,
+          message: info.message,
+          status: info.status,
+        },
         transfer: `${pathId}-BTC`,
         granularity: granularity,
       })
@@ -43,7 +38,12 @@ const ProductDetail = ({ pathId, name, message, status }) => {
     dispatch(
       productdetailAction({
         id: pathId,
-        info: { id: id, name: name, message: message, status: status },
+        info: {
+          id: id,
+          name: info.name,
+          message: info.message,
+          status: info.status,
+        },
         transfer: `${pathId}-${transfer}`,
         granularity: 60,
       })
@@ -80,8 +80,8 @@ const ProductDetail = ({ pathId, name, message, status }) => {
                   <tr>
                     <th>TIME</th>
                     <th>LOW</th>
-                    <th>HIGH</th>
-                    <th>OPEN</th>
+                    {/* <th>HIGH</th>
+                    <th>OPEN</th> */}
                     <th>CLOSE</th>
                     <th>VOLUMN</th>
                   </tr>
@@ -89,8 +89,8 @@ const ProductDetail = ({ pathId, name, message, status }) => {
                     historyRates.map((history) => (
                       <tr>
                         <td>{timeTrans(history[TIME])}</td>
-                        <td>{history[LOW]}</td>
-                        <td>{history[HIGH]}</td>
+                        {/* <td>{history[LOW]}</td>
+                        <td>{history[HIGH]}</td> */}
                         <td>
                           <font
                             color={
