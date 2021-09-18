@@ -79,9 +79,9 @@ const ProductDetail = ({ pathId }) => {
                 <tbody>
                   <tr>
                     <th>TIME</th>
-                    <th>LOW</th>
-                    {/* <th>HIGH</th>
-                    <th>OPEN</th> */}
+                    {/* <th>LOW</th> */}
+                    {/* <th>HIGH</th> */}
+                    <th>OPEN</th>
                     <th>CLOSE</th>
                     <th>VOLUMN</th>
                   </tr>

@@ -1,8 +1,8 @@
-export const signIn = () => {
+export const signIn = (response) => {
   return {
     type: "SIGN_IN",
     payload: {
-      data: "name",
+      data: response,
     },
   };
 };

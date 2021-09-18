@@ -1,6 +1,6 @@
 const initState = {
   userName: "",
-  isSinedIn: false,
+  isSignedIn: false,
 };
 const userReducer = (state = initState, action) => {
   switch (action.type) {

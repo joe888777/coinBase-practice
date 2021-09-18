@@ -29,13 +29,14 @@ function SignInBtn(props: any) {
       <GoogleAuth>
         <GoogleAuthConsumer>
           {({ responseState, isAuthenticated }: IOAuthState) => {
-            if (!isLoggedIn) {
+            if (!isAuthenticated) {
               return (
                 <GoogleButton
                   placeholder="demo/search.png" // Optional
                   options={options}
                   apiUrl={`${URL_web}/login.json`}
                   defaultStyle={true} // Optional
+                  displayErrors={false}
                 >
                   Sign in with google
                 </GoogleButton>
@@ -44,7 +45,6 @@ function SignInBtn(props: any) {
               return <button>LOGOUT</button>;
             }
           }}
-          }
         </GoogleAuthConsumer>
       </GoogleAuth>
       }
