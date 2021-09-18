@@ -29,7 +29,7 @@ function SignInBtn(props: any) {
       <GoogleAuth>
         <GoogleAuthConsumer>
           {({ responseState, isAuthenticated }: IOAuthState) => {
-            if (!isLoggedIn()) {
+            if (!isAuthenticated) {
               return (
                 <GoogleButton
                   placeholder="demo/search.png" // Optional
