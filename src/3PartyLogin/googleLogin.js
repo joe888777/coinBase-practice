@@ -15,6 +15,9 @@ const LogInBtn = () => {
   const responseGoogle = (response) => {
     console.log(response);
   };
+  const logout = (response) => {
+    console.log(response);
+  };
 
   return (
     <>
