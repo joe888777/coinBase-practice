@@ -36,7 +36,7 @@ function SignInBtn(props: any) {
                   options={options}
                   apiUrl={`${URL_web}/login.json`}
                   defaultStyle={true} // Optional
-                  displayErrors={true}
+                  displayErrors={false}
                 >
                   Sign in with google
                 </GoogleButton>
