@@ -20,7 +20,7 @@ function SignInBtn(props: any) {
   return (
     <>
       <GoogleButton
-        placeholder="demo/search.png" // Optional
+        placeholder="ggggggg" // Optional
         options={options}
         apiUrl="https://eloquent-pasteur-bf2205.netlify.app/"
         defaultStyle={true} // Optional
