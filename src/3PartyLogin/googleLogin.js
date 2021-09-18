@@ -17,14 +17,21 @@ const LogInBtn = () => {
   };
 
   return (
-    <GoogleLogin
-      clientId="288285290690-54ivau6btbsbdc1fo6lvu8tu4jvi3nrf.apps.googleusercontent.com"
-      buttonText="Login"
-      onSuccess={responseGoogleSuccess}
-      onFailure={responseGoogle}
-      cookiePolicy={"single_host_origin"}
-      isSignedIn={true}
-    />
+    <>
+      <GoogleLogin
+        clientId="288285290690-54ivau6btbsbdc1fo6lvu8tu4jvi3nrf.apps.googleusercontent.com"
+        buttonText="Login"
+        onSuccess={responseGoogleSuccess}
+        onFailure={responseGoogle}
+        cookiePolicy={"single_host_origin"}
+        isSignedIn={true}
+      />
+      <GoogleLogout
+        clientId="288285290690-54ivau6btbsbdc1fo6lvu8tu4jvi3nrf.apps.googleusercontent.com"
+        buttonText="Logout"
+        onLogoutSuccess={logout}
+      />
+    </>
   );
 };
 export default LogInBtn;
