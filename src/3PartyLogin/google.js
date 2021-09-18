@@ -7,6 +7,7 @@ import {
   logOutOAuthUser,
   GoogleAuth,
 } from "react-google-oauth2";
+import { useSelector, useDispatch } from "react-redux";
 const key_test =
   "288285290690-cvr169h30fkopc07ui00nano8jb54a6u.apps.googleusercontent.com";
 const key_web =
@@ -21,32 +22,29 @@ function SignInBtn(props: any) {
     includeGrantedScopes: true,
     accessType: "offline",
   };
-
+  const handleLogIn = () => {};
+  const handleLogOut = () => {};
   return (
     <>
       <GoogleAuth>
         <GoogleAuthConsumer>
           {({ responseState, isAuthenticated }: IOAuthState) => {
-            if (!isAuthenticated) {
+            if (!isLoggedIn) {
               return (
                 <GoogleButton
                   placeholder="demo/search.png" // Optional
                   options={options}
                   apiUrl={`${URL_web}/login.json`}
                   defaultStyle={true} // Optional
-                  displayErrors={true}
                 >
                   Sign in with google
                 </GoogleButton>
               );
             } else {
-              if (responseState.accessToken) {
-                // You can also use isOAuthLoggedIn()
-                // Now send a request to your server using  createOAuthHeaders() function
-                return <button>LOGOUT</button>;
-              }
+              return <button>LOGOUT</button>;
             }
           }}
+          }
         </GoogleAuthConsumer>
       </GoogleAuth>
       }
