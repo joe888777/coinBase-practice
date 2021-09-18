@@ -15,5 +15,5 @@ export const timeTrans = (timestamp) => {
   const Minute =
     date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
   const res = `${year}-${month}-${day} ${hour}:${Minute}`;
-  return `${year}-${month}-${day} ${hour}:${Minute}`;
+  return res;
 };

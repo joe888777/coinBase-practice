@@ -15,7 +15,6 @@ const Favorite = () => {
     dispatch(currencyFetchAction());
   }, [dispatch]);
   const { currencies, favorite } = useSelector((state) => state.currencies);
-  const { id } = useSelector((state) => state.product);
   return (
     <>
       <h1>FAVORITE</h1>

@@ -18,7 +18,7 @@ const FavoriteBtn = ({ productId }) => {
     } else {
       setFavoriteYes(false);
     }
-  }, [favoriteYes]);
+  }, [favorite, productId]);
   const handleBtnClick = () => {
     if (!favoriteYes) {
       dispatch(favoriteAddAction(productId));

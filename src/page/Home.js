@@ -17,7 +17,6 @@ const Home = () => {
   const { currencies, isLoading, searched } = useSelector(
     (state) => state.currencies
   );
-  const { id } = useSelector((state) => state.product);
 
   return (
     <>
@@ -60,9 +59,5 @@ const HomeStyle = styled(motion.div)`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
 `;
-const UnderLine = styled(motion.div)`
-  min-width: 100%;
-  background: #000;
-  height: 1px;
-`;
+
 export default Home;
