@@ -32,7 +32,7 @@ function SignInBtn(props: any) {
                 <GoogleButton
                   placeholder="demo/search.png" // Optional
                   options={options}
-                  apiUrl={`${URL_web}/google_login`}
+                  apiUrl={`${URL_web}`}
                   defaultStyle={true} // Optional
                   displayErrors={true}
                 >
