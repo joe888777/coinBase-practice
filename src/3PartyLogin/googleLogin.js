@@ -1,5 +1,5 @@
 // or
-import { GoogleLogin } from "react-google-login";
+import { GoogleLogin, GoogleLogout } from "react-google-login";
 
 const LogInBtn = () => {
   const responseGoogle = (response) => {
@@ -13,6 +13,7 @@ const LogInBtn = () => {
       onSuccess={responseGoogle}
       onFailure={responseGoogle}
       cookiePolicy={"single_host_origin"}
+      isSignedIn={true}
     />
   );
 };
