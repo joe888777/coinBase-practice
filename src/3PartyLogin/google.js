@@ -11,8 +11,7 @@ function SignInBtn(props: any) {
   const options: IAuthorizationOptions = {
     clientId:
       "288285290690-54ivau6btbsbdc1fo6lvu8tu4jvi3nrf.apps.googleusercontent.com",
-    redirectUri:
-      "https://6144ae370f59fa92056998da--eloquent-pasteur-bf2205.netlify.app/",
+    redirectUri: "https://eloquent-pasteur-bf2205.netlify.app/",
     scopes: ["openid", "profile", "email"],
     includeGrantedScopes: true,
     accessType: "offline",
@@ -23,7 +22,7 @@ function SignInBtn(props: any) {
       <GoogleButton
         placeholder="demo/search.png" // Optional
         options={options}
-        apiUrl="https://6144ae370f59fa92056998da--eloquent-pasteur-bf2205.netlify.app/"
+        apiUrl="https://eloquent-pasteur-bf2205.netlify.app/"
         defaultStyle={true} // Optional
       />
     </>
