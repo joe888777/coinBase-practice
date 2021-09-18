@@ -5,7 +5,12 @@ import { signIn } from "../redux/actions/userAction";
 const LogInBtn = () => {
   const dispatch = useDispatch();
   const responseGoogleSuccess = (response) => {
-    dispatch(signIn(response));
+    dispatch({
+      type: "SIGN_IN",
+      payload: {
+        data: response,
+      },
+    });
   };
   const responseGoogle = (response) => {
     console.log(response);
