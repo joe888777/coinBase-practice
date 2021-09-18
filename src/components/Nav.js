@@ -8,7 +8,7 @@ import {
   clearSearchedAction,
 } from "../redux/actions/currencyAction";
 import SignInBtn from "../3PartyLogin/google";
-
+import LogInBtn from "../3PartyLogin/googleLogin";
 const Nav = () => {
   const [searchText, setSearchText] = useState("");
   const dispatch = useDispatch();
@@ -22,7 +22,8 @@ const Nav = () => {
   return (
     <>
       <NavStyled>
-        <SignInBtn />
+        {/* <SignInBtn /> */}
+        <LogInBtn />
         <Link to="/">Home</Link>
         <Link to="/favorite">Favorite</Link>
         <input
