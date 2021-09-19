@@ -18,7 +18,7 @@ const Product = ({ id, name, message, status }) => {
   return (
     <CurrencyStyled>
       <Link to={`/product/${id}`} onClick={handleProductClick}>
-        <h3>{id}</h3>
+        <h3 layoutId={`title ${id}`}>{id}</h3>
         <label>{name}</label>
         <p>{message}</p>
         <h4>{status}</h4>

@@ -13611,14 +13611,6 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
 
-react-google-authentication@^0.0.18:
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/react-google-authentication/-/react-google-authentication-0.0.18.tgz#34e04bc1bbc9a6ac97a739adacf07f6cdc7cdc82"
-  integrity sha512-VR6DYXCumq6lPbFio9nD8g1LpzNmOjTWEaxYg1td80dLchSM7v2nzirhTvFURXkMwkaSgInZsaSo17xmeTtdlg==
-  dependencies:
-    url-search-params-polyfill "^2.0.0"
-    whatwg-fetch "2.0.3"
-
 react-google-login@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-5.2.2.tgz#a20b46440c6c1610175ef75baf427118ff0e9859"
@@ -13626,11 +13618,6 @@ react-google-login@^5.2.2:
   dependencies:
     "@types/react" "*"
     prop-types "^15.6.0"
-
-react-google-oauth2@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/react-google-oauth2/-/react-google-oauth2-0.1.2.tgz#7ef83b54660244c4deff9768c392faf78d089e0c"
-  integrity sha512-LTCzKF0uf2ESjkLveZBU1pupD7OvUtPzqiNwZBL4zJjvFkpfE6gFMI1F5IzZY5WP1hua+VheCWCBvtQuXTZrTw==
 
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
@@ -16125,11 +16112,6 @@ url-parse@^1.4.3, url-parse@^1.4.7:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-url-search-params-polyfill@^2.0.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-2.0.3.tgz#466b451df7e707f9a0de601fa39b0a5816402dcd"
-  integrity sha512-DLQzhOippXPJOS+XJOwZGV5tILjGhIQEPbjEDAvTh5nWcZOpbGZG0xXj/lss+dAA1oC/8HYR5xFfC28TW0b+VQ==
-
 url-to-options@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
@@ -16470,11 +16452,6 @@ whatwg-encoding@^1.0.5:
   integrity sha512-b5lim54JOPN9HtzvK9HFXvBma/rnfFeqsic0hSpjtDbVxR3dJKLc+KB4V6GgiGOvl7CY/KNh8rxSo9DKQrnUEw==
   dependencies:
     iconv-lite "0.4.24"
-
-whatwg-fetch@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
-  integrity sha1-nITsLc9oGH/wC8ZOEnS0QhduHIQ=
 
 whatwg-fetch@^3.4.1:
   version "3.6.1"

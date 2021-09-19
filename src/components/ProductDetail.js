@@ -52,11 +52,11 @@ const ProductDetail = ({ pathId }) => {
   return (
     <DetailShadow>
       <Shadow onClick={exitDetailHandler} />
-      <Detail>
+      <Detail layoutId={pathId}>
         {!isLoading ? (
           id ? (
             <>
-              <h2>{pathId}</h2>
+              <h2 layoutId={`title ${id}`}>{pathId}</h2>
               <h3>NAME:{info.name}</h3>
               <h3>
                 status:{" "}

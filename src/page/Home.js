@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
@@ -21,35 +21,40 @@ const Home = () => {
   return (
     <>
       <h1>Currencies</h1>
-      {searched && (
-        <HomeStyle>
-          <h2>Searched：</h2>
-          <Product
-            id={searched.id}
-            name={searched.name}
-            message={searched.message}
-            status={searched.status}
-            key={`${searched.id} searched `}
-          />
-        </HomeStyle>
-      )}
-      {pathId && <ProductDetail pathId={pathId} />}
-      {!isLoading ? (
-        <HomeStyle>
-          {currencies.length &&
-            currencies.map((currency) => (
-              <Product
-                id={currency.id}
-                name={currency.name}
-                message={currency.message}
-                status={currency.status}
-                key={currency.id}
-              />
-            ))}
-        </HomeStyle>
-      ) : (
-        <Loading />
-      )}
+      <AnimateSharedLayout type="crossfade">
+        <AnimatePresence>
+          {pathId && <ProductDetail pathId={pathId} />}
+        </AnimatePresence>
+        {searched && (
+          <SearchedStyle>
+            <h2>Searched：</h2>
+            <Product
+              id={searched.id}
+              name={searched.name}
+              message={searched.message}
+              status={searched.status}
+              key={`${searched.id} searched `}
+              layoutId={pathId}
+            />
+          </SearchedStyle>
+        )}
+        {!isLoading ? (
+          <HomeStyle>
+            {currencies.length &&
+              currencies.map((currency) => (
+                <Product
+                  id={currency.id}
+                  name={currency.name}
+                  message={currency.message}
+                  status={currency.status}
+                  key={currency.id}
+                />
+              ))}
+          </HomeStyle>
+        ) : (
+          <Loading />
+        )}
+      </AnimateSharedLayout>
     </>
   );
 };
@@ -57,9 +62,15 @@ const HomeStyle = styled(motion.div)`
   padding: 1rem 2rem;
   display: grid;
   min-height: 100vh;
+
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: max-content;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
   grid-gap: 1rem;
 `;
-
+const SearchedStyle = styled(motion.div)`
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 export default Home;
