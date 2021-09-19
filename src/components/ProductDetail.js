@@ -13,7 +13,7 @@ const ProductDetail = ({ pathId }) => {
   );
 
   // time, low, high, open, close, volume
-  const [TIME, LOW, HIGH, OPEN, CLOSE, VOLUME] = [0, 1, 2, 3, 4, 5];
+  const [TIME, OPEN, CLOSE, VOLUME] = [0, 3, 4, 5];
   const exitDetailHandler = (e) => {
     dispatch({ type: "CLEAN_DETAIL" });
     document.body.style.overflow = "auto";
@@ -94,7 +94,11 @@ const ProductDetail = ({ pathId }) => {
                         <td>
                           <font
                             color={
-                              history[OPEN] < history[CLOSE] ? "green" : "red"
+                              history[OPEN] < history[CLOSE]
+                                ? "green"
+                                : history[OPEN] === history[CLOSE]
+                                ? "black"
+                                : "red"
                             }
                           >
                             {history[OPEN]}
@@ -103,7 +107,11 @@ const ProductDetail = ({ pathId }) => {
                         <td>
                           <font
                             color={
-                              history[OPEN] < history[CLOSE] ? "green" : "red"
+                              history[OPEN] < history[CLOSE]
+                                ? "green"
+                                : history[OPEN] === history[CLOSE]
+                                ? "black"
+                                : "red"
                             }
                           >
                             {history[CLOSE]}
@@ -182,6 +190,7 @@ const Detail = styled(motion.div)`
   table {
     margin: 1rem auto;
     border-spacing: 1rem;
+    font-weight: bold;
     th {
       text-align: left;
     }

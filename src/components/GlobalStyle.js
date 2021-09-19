@@ -31,6 +31,9 @@ body{
         text-align:center;
         color: #646464;
     }
+    .root{
+        min-height:100vh;
+    }
     @media(max-width:800px){
         font-size:12px;
     }

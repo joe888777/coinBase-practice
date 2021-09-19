@@ -7,7 +7,6 @@ import {
   searchAction,
   clearSearchedAction,
 } from "../redux/actions/currencyAction";
-import SignInBtn from "../3PartyLogin/google";
 import LogInBtn from "../3PartyLogin/googleLogin";
 const Nav = () => {
   const [searchText, setSearchText] = useState("");
