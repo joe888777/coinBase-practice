@@ -56,7 +56,9 @@ const Home = () => {
 const HomeStyle = styled(motion.div)`
   padding: 1rem 2rem;
   display: grid;
+  min-height: 100vh;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: max-content;
   grid-gap: 1rem;
 `;
 

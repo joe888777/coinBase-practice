@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import { Route, Switch } from "react-router-dom";
 import GlobalStyle from "./components/GlobalStyle";
 import Favorite from "./page/Favorite";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div>
@@ -16,6 +17,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

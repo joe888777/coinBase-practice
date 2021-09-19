@@ -55,6 +55,9 @@ const CurrencyStyled = styled(motion.div)`
   h4 {
     color: green;
   }
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StarContaner = styled(motion.div)`
