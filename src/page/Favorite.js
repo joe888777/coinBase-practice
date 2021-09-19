@@ -43,15 +43,9 @@ const Favorite = () => {
 const FavoriteStyle = styled(motion.div)`
   padding: 1rem 2rem;
   display: grid;
-<<<<<<< HEAD
   min-height: calc(100vh - 4rem);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
-=======
-  min-height: 100vh;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: max-content;
->>>>>>> dbc25797cf6c94fbb24f3ef89416e256927d6a56
   grid-gap: 1rem;
 `;
 export default Favorite;

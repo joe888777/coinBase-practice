@@ -62,7 +62,6 @@ const HomeStyle = styled(motion.div)`
   padding: 1rem 2rem;
   display: grid;
   min-height: 100vh;
-<<<<<<< HEAD
 
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
@@ -74,11 +73,4 @@ const SearchedStyle = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
 `;
-=======
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: max-content;
-  grid-gap: 1rem;
-`;
-
->>>>>>> dbc25797cf6c94fbb24f3ef89416e256927d6a56
 export default Home;

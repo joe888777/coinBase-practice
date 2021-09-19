@@ -2,7 +2,7 @@
 
 ## Demo
 
-Version 1.0: [Click me](https://app.netlify.com/sites/eloquent-pasteur-bf2205/overview)
+Version 1.0: [Click me](https://eloquent-pasteur-bf2205.netlify.app/)
 
 ## What you can do
 
