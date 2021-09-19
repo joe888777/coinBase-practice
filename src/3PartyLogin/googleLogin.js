@@ -29,7 +29,7 @@ const LogInBtn = () => {
               Sign In
             </button>
           )}
-          clientId={process.env.GOOGLE_CLIEND_ID}
+          clientId={process.env.REACT_APP_GOOGLE_CLIEND_ID}
           buttonText="Login"
           onSuccess={responseGoogleSuccess}
           onFailure={responseGoogle}
@@ -46,7 +46,7 @@ const LogInBtn = () => {
               {userName} Sign Out
             </button>
           )}
-          clientId={process.env.GOOGLE_CLIEND_ID}
+          clientId={process.env.REACT_APP_GOOGLE_CLIEND_ID}
           yarn
           onLogoutSuccess={logout}
         />

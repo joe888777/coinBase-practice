@@ -1,6 +1,5 @@
 const based_url = "https://api.pro.coinbase.com/";
-const api_key = process.env.COINBASE_CLIENT_ID;
-//   "client_id=9f88edbd33fb87670ff519bca13d460c86ad72bbc2a4b4d9557145370f16d8de";
+const api_key = process.env.REACT_APP_COINBASE_CLIENT_ID;
 const products = "products";
 const currencies = "currencies/";
 export const historicRateURL = (product_id, granularity = 60) =>
