@@ -1,4 +1,6 @@
-# CoinBase data practice - to lookup history Rate of Crypto Coin 加密貨幣查詢網-串以 CoinBase 提供之 api 資料
+# CoinBase data practice - to lookup history Rate of Crypto Coin
+
+# CoinBase 加密貨幣查詢網-串以 CoinBase 提供之 api 資料
 
 ## Demo
 
@@ -48,10 +50,10 @@ Version 1.0: [Click me](https://eloquent-pasteur-bf2205.netlify.app/)
 yarn install
 ```
 
-remember to set .env,there are two envirenment variables <font color='blue'>React_APP_COINBASE_CLIENT_ID</font>and <font color='blue'>React_APP_GOOGLE_CLIENT_ID</font>
+remember to set .env,there are two envirenment variables <font style='color:blue'>React_APP_COINBASE_CLIENT_ID</font>and <font style='color:blue'>React_APP_GOOGLE_CLIENT_ID</font>
 you should get both [CoinBase API key](https://docs.pro.coinbase.com/) and [Google Console API key](https://console.cloud.google.com/apis/).
 
-記得先設定 .env,裡面有兩個環境變數<font color='blue'>React_APP_COINBASE_CLIENT_ID</font>and <font color='blue'>React_APP_GOOGLE_CLIENT_ID</font>必須先到 coinbase 以及 Google Console 拿到對應的 api key。
+記得先設定 .env,裡面有兩個環境變數<font style='color:blue'>React_APP_COINBASE_CLIENT_ID</font>and <font style='color:blue'>React_APP_GOOGLE_CLIENT_ID</font>必須先到 coinbase 以及 Google Console 拿到對應的 api key。
 
 2. run on local
 
